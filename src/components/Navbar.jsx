@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/reebok_logo.png";
+import Logo from "../assets/reebok_logo_black.png";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdMenu, MdOutlineShoppingBag } from "react-icons/md";
 import { motion } from "framer-motion";
@@ -54,7 +54,7 @@ const slideRight = (delay) => ({
 
 const Navbar = () => {
   return (
-    <nav className="bg-primary text-white">
+    <nav className="bg-primary text-black">
       <div className="container py-6 flex justify-between items-center">
         {/* Logo section */}
         <motion.div variants={slideRight(0.1)} initial="hidden" animate="show">

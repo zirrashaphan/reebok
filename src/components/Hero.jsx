@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HeroPng from "../assets/reebok_shoe.png";
 import { FaArrowLeft, FaArrowRight, FaPlay } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import Logo from "../assets/reebok_logo.png";
+import Logo from "../assets/reebok_logo_black.png";
 import ReactPlayer from "react-player";
 
 const slideUp = (delay) => ({
@@ -23,7 +23,7 @@ const Hero = () => {
   
 
   return (
-    <section className="bg-primary text-white relative">
+    <section className="bg-primary text-black relative">
       <div className="container grid grid-cols-1 md:grid-cols-3 min-h-[700px] md:gap-32">
         {/* Brand Info */}
         <div className="flex flex-col justify-end py-14 md:py-20">
@@ -71,7 +71,7 @@ const Hero = () => {
             className="max-w-[500px] xl:max-w-[600px] relative z-10 brightness-110"
           />
 
-          {/* Background text and white light section */}
+          {/* Background Image and white light section */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -86,7 +86,7 @@ const Hero = () => {
           </motion.div>
 
 
-          <div className="h-[500px] w-[500px] bg-white/45 blur-3xl rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="h-[500px] w-[500px] bg-black/45 blur-3xl rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
 
           {/* Play Video */}
           <motion.div
@@ -112,7 +112,7 @@ const Hero = () => {
                   onClick={closeModal} // Close modal when clicking outside
                 >
                   <div
-                    className="bg-white p-4 rounded-lg shadow-lg max-w-lg w-full relative"
+                    className="bg-black p-4 rounded-lg shadow-lg max-w-lg w-full relative"
                     onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
                   >
                     {/* Close Button */}
@@ -141,7 +141,7 @@ const Hero = () => {
               variants={slideUp(0.6)}
               initial="hidden"
               animate="show"
-              className="text-sm"
+              className="text-sm text-black"
             >
               Step into timeless style with the Reebok Classic—where heritage meets unstoppable comfort. Own the streets with a sneaker that never goes out of fashion.
             </motion.p>
@@ -153,10 +153,16 @@ const Hero = () => {
               animate="show"
               className="flex gap-8 pt-6 relative z-20"
             >
-              <div className="text-2xl rounded-full border border-white p-2 hover:bg-white hover:text-primary duration-300">
+              {/* <div className="text-2xl rounded-full border border-white p-2 hover:bg-white hover:text-primary duration-300">
                 <FaArrowLeft />
               </div>
               <div className="text-2xl rounded-full border border-white p-2 hover:bg-white hover:text-primary duration-300">
+                <FaArrowRight />
+              </div> */}
+              <div className="text-2xl rounded-full border border-black p-2 hover:bg-black hover:text-primary duration-300">
+                <FaArrowLeft />
+              </div>
+              <div className="text-2xl rounded-full border border-black p-2 hover:bg-black hover:text-primary duration-300">
                 <FaArrowRight />
               </div>
             </motion.div>
